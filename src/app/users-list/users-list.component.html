@@ -1,14 +1,27 @@
 <div class="users__list row">
   <div class="search col-lg-12">
-    <form>
+    <form (ngSubmit)="onSearch()">
       <div class="input-group">
-        <input type="text" class="search__bar form-control" placeholder="Search">
+        <input
+          type="text"
+          class="search__bar form-control"
+          [(ngModel)]="searchText"
+          name="searchText"
+          placeholder="Search by email"
+        />
         <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <button
+            class="btn btn-default"
+            type="submit"
+            (click)="clearSearch()"
+          >
+            Search
           </button>
         </div>
       </div>
     </form>
+  </div>
+  <div class="user">
+    <app-user [userFilter]="searchText"></app-user>
   </div>
 </div>

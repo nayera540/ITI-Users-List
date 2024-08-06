@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
 import { UserComponent } from '../user/user.component';
-import { User } from '../User';
-import usersList from "../../assets/users.json";
+import { FormsModule, NgModel } from '@angular/forms';
+
 
 
 @Component({
   selector: 'app-users-list',
   standalone: true,
-  imports: [UserComponent],
+  imports: [UserComponent, FormsModule],
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.css'
 })
 export class UsersListComponent {
-  users: User[] = usersList;
+  searchText:string = '';
+  onSearch(){
+
+  }
+
+  clearSearch(){
+    this.searchText = '';
+    this.onSearch();
+
+  }
 }
