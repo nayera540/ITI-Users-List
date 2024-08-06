@@ -1,3 +1,22 @@
 .user{
   margin-top: 30px;
+  margin-left: 30px;
+}
+
+button{
+  background-color: #179BAE;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.users__list {
+  width: 50rem;
+  margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 35px;
+}
+
+h1{
+  margin-bottom: 25px;
 }
